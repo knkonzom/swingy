@@ -4,68 +4,73 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.swingy.*;
+import com.swingy.model.storage.Storage;
+import com.swingy.controller.DataController;
+import com.swingy.model.characters.PrintStats;
 
 public class ConsoleView {
-    Scanner input = new Scanner(System.in);
+
+    Scanner userInput = new Scanner(System.in);
 
     public ConsoleView() throws IOException {
-        System.out.println("Welcome to Adventure Game");
-        System.out.println("Press '1' to create new game");
-        System.out.println("Press '2' to select hero");
+        System.out.println("Welcome to the Game!");
+        System.out.println("To start: \n");
+        System.out.println("Enter [1] to start a new game.");
+        System.out.println("Enter [2] load a hero");
 
         try {
-            int choice = input.nextInt();
-            if (Integer.toString(choice).isEmpty()) {
-                System.out.println("No INPUT!");
-            }
-            String name = input.nextLine();
 
-            switch (choice) {
+            int input = userInput.nextInt();
+
+            if (Integer.toString(input).isEmpty()) {
+                System.out.println("No input found!");
+            }
+            String name = userInput.nextLine();
+
+            switch (input) {
                 case 1:
-                    System.out.println("Enter new name: \n");
-                    name = input.nextLine();
+                    System.out.println("Enter your name to begin: \n");
+                    System.out.println("----------------------------");
+
+                    name = userInput.nextLine();
                     if (name.isEmpty()) {
                         System.out.println("No name entered!");
                         System.exit(0);
                     }
-                    if (name.length() > 15) {
-                        System.out.println("Too many characters in name!");
+                    if (name.length() > 20) {
+                        System.out.println("Name is too long!");
                         System.exit(1);
                     }
-                    DataController dataControl = new DataController(name);
-                    dataControl.getStorage().saveData(name);
+                    DataController control = new DataController(name);
+                    control.getStorage().storeData(name);
 
-                    System.out.println("Success: new game created!");
-                    System.out.println("\tType 'START' to begin game.");
-                    System.out.println("\tType 'QUIT' to exit game.");
-                    String userInput = input.nextLine();
-
-                    if (userInput.equalsIgnoreCase("START")) {
-                        dataControl.getStorage().loadData(name);
-                        dataControl.getStats().displayStats(name);
-                        dataControl.getNavigate().moveDirection(PrintStats.getCoordinates(), name);
+                    System.out.println("Game started! Please make a selection below: ");
+                    System.out.println("\t\tType START to begin");
+                    System.out.println("\t\tType QUIT to exit game.");
+                    String selection = userInput.nextLine();
+                    if (selection.equalsIgnoreCase("START")) {
+                        control.getStorage().loadData(name);
+                        control.getStats().displayStats(name);
+                        control.getNavigation().moveDirection(PrintStats.getCoordinates(), name);
                     }
-                    else if (userInput.equalsIgnoreCase("QUIT")) {
+                    else if (selection.equalsIgnoreCase("QUIT")) {
                         System.exit(1);
                     }
                     break;
-
                 case 2:
-                    System.out.println("Please enter hero name: \n");
-                    name = input.nextLine();
-                    DataController dataControl2 = new DataController(name);
-                    dataControl2.getStorage().loadData(name);
-                    dataControl2.getStats().displayStats(name);
-                    dataControl2.getNavigate().moveDirection(PrintStats.getCoordinates(), name);
-
+                    System.out.println("Enter name of previous hero: ");
+                    name = userInput.nextLine();
+                    DataController control1 = new DataController(name);
+                    control1.getStorage().loadData(name);
+                    control1.getStats().displayStats(name);
+                    control1.getNavigation().moveDirection(PrintStats.getCoordinates(), name);
                     break;
-
                 default:
                     System.out.println("Invalid selection!");
+
             }
         } catch (InputMismatchException e) {
-            throw new InputMismatchException("Invalid input!");
+            throw new InputMismatchException("Wrong input!");
         }
     }
 }

@@ -1,6 +1,7 @@
-package com.swingy.model.artifacts;
+package com.swingy.model.weaponfactory;
 
 public class Armour {
+
     public String name;
     public int defense;
 }
