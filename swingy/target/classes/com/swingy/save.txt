@@ -1,11 +1,10 @@
 Class Hobbit
 Name kwakhanya
-Level 2
-Attack 9
-Defense 16
-Experience 1150
-Hit Points -1
-PositionX 2
-PositionY 6
+Level 3
+Attack 16
+Defense 26
+Experience 3925
+Hit Points 30
+PositionX 6
+PositionY 4
 DONE
-
