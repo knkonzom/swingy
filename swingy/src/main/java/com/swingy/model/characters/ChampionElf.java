@@ -13,3 +13,4 @@ public class ChampionElf extends Champion {
         hitPoints = 50;
     }
 }
+

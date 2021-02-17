@@ -1,5 +1,6 @@
 package com.swingy.controller;
 
+
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;

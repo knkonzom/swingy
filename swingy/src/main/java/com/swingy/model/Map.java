@@ -28,6 +28,7 @@ public class Map {
         villainPosition(champion);
     }
 
+    
     public void villainPosition(Champion champion) {
         Random random = new Random();
         int villainCount = 3 * size;

@@ -22,6 +22,7 @@ public class ConsoleView {
         System.out.println("new game[new] / load game[load]");
 
 
+        
         String selection = userInput.nextLine();
         if (selection.equalsIgnoreCase("new")) {
             championSelect();

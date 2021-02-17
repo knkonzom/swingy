@@ -1,5 +1,6 @@
 package com.swingy.model.artifacts;
 
+
 public class Helm {
     public String name;
     public int hitPointsBoost;

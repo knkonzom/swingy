@@ -1,5 +1,6 @@
 package com.swingy.model.characters;
 
+
 public class Champion {
 
     public String champName = null;

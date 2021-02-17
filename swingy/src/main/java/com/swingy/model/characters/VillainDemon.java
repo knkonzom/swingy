@@ -16,3 +16,4 @@ public class VillainDemon extends Villain {
         armour = new Armour(artifact, increaseDefense);
     }
 }
+
