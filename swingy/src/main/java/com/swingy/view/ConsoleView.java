@@ -2,7 +2,6 @@ package com.swingy.view;
 
 import java.io.*;
 import java.util.Scanner;
-//import javax.validation.constraints.*;
 
 import com.swingy.model.*;
 import com.swingy.model.characters.*;

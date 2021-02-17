@@ -2,6 +2,8 @@ package com.swingy.model.characters;
 
 import com.swingy.model.artifacts.*;
 
+
+
 public class ChampionHobbit extends Champion {
     public ChampionHobbit() {
         champClass = "Hobbit";

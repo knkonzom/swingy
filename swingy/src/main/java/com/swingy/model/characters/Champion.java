@@ -1,9 +1,15 @@
 package com.swingy.model.characters;
+import javax.validation.constraints.*;
 
 
 public class Champion {
 
+    @NotNull
+    @NotBlank
     public String champName = null;
+    
+    @NotNull
+    @NotBlank
     public String champClass = null;
     public int level;
     public int experience;
