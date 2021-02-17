@@ -1,4 +1,4 @@
 package com.swingy.model;
 
-public class Fight {
+public class Map {
 }
