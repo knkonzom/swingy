@@ -24,6 +24,10 @@ public class VillainEncounterController {
         String selection = userInput.nextLine();
 
         run = random.nextInt(2);
+        if (selection.equalsIgnoreCase("quit"))
+        {
+            System.exit(1);
+        }
         if (selection.equalsIgnoreCase("run") && run == 1) {
 
             champion.y = champion.saveY;

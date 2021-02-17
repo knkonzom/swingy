@@ -1,0 +1,15 @@
+com/swingy/model/characters/VillainWitch.class
+com/swingy/model/artifacts/Helm.class
+com/swingy/view/ConsoleView.class
+com/swingy/model/characters/ChampionDwarf.class
+com/swingy/model/characters/Villain.class
+com/swingy/model/characters/VillainDemon.class
+com/swingy/model/characters/ChampionElf.class
+com/swingy/model/characters/Champion.class
+com/swingy/model/characters/ChampionHobbit.class
+com/swingy/model/artifacts/Armour.class
+com/swingy/controller/GameController.class
+com/swingy/model/characters/VillainOrc.class
+com/swingy/model/Map.class
+com/swingy/controller/VillainEncounterController.class
+com/swingy/model/artifacts/Weapon.class

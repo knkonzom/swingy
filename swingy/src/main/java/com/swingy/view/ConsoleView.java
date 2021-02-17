@@ -20,10 +20,13 @@ public class ConsoleView {
         Scanner userInput = new Scanner(System.in);
         System.out.println("--- Welcome to SWINGY ---");
         System.out.println("new game[new] / load game[load]");
+        System.out.println("Type 'Quit' to exit game.");
 
-
-        
+    
         String selection = userInput.nextLine();
+        if (selection.equalsIgnoreCase("quit")) {
+            System.exit(1);
+        }
         if (selection.equalsIgnoreCase("new")) {
             championSelect();
             map = new Map(champion);
@@ -64,11 +67,11 @@ public class ConsoleView {
             champion = new ChampionElf();
             System.out.println("Enter name: ");
             String name = userInput.nextLine();
-            while (name.equalsIgnoreCase("")) ;
-            {
-                System.out.println("Enter name: ");
-                name = userInput.nextLine();
-            }
+            // while (name.equalsIgnoreCase("")) ;
+            // {
+            //     System.out.println("Enter name: ");
+            //     name = userInput.nextLine();
+            // }
             champion.champName = name;
             System.out.println("Welcome, " + champion.champName + " to the game!");
         }
@@ -108,7 +111,7 @@ public class ConsoleView {
                 while (!line.contains("PositionX")) {
                     String stats = line.split(" ")[0];
                     String value = line.split(" ")[1];
-                    System.out.println(stats + ": " + value + " .");
+                    System.out.println(stats + ": " + value);
                     line = bufReader.readLine();
                 }
                 System.out.println("\n");
@@ -148,6 +151,9 @@ public class ConsoleView {
         Scanner userInput = new Scanner(System.in);
 
         String selection = userInput.nextLine();
+        if (selection.equalsIgnoreCase("quit")) {
+            System.exit(1);
+        }
         if (selection.equalsIgnoreCase("north")) {
             if (champion.y - 1 < 0) {
                 map = new Map(champion);
