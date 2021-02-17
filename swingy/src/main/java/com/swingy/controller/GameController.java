@@ -18,8 +18,8 @@ public class GameController {
         writer.println("Defense " + champion.defense);
         writer.println("Experience " + champion.experience);
         writer.println("Hit Points " + champion.hitPoints);
-        writer.println("Map Position X " + (champion.x + 1));
-        writer.println("Map Position Y " + (champion.y + 1));
+        writer.println("PositionX " + (champion.x + 1));
+        writer.println("PositionY " + (champion.y + 1));
         writer.println("DONE");
         writer.close();
     }
@@ -59,10 +59,10 @@ public class GameController {
             if (line.split(" ")[0].equalsIgnoreCase("Hit Points"))
                 champion.hitPoints = Integer.parseInt(line.split(" ")[1]);
 
-            if (line.split(" ")[0].equalsIgnoreCase("Map Position X"))
+            if (line.split(" ")[0].equalsIgnoreCase("PositionX"))
                 champion.x = Integer.parseInt(line.split(" ")[1]);
 
-            if (line.split(" ")[0].equalsIgnoreCase("Map Position Y"))
+            if (line.split(" ")[0].equalsIgnoreCase("PositionY"))
                 champion.y = Integer.parseInt(line.split(" ")[1]);
             line = bufReader.readLine();
         }

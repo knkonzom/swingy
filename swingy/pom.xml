@@ -61,7 +61,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>dependency-jars/</classpathPrefix>
-                            <mainClass>com.swingy.GamePlay</mainClass>
+                            <mainClass>com.swingy.view.ConsoleView</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

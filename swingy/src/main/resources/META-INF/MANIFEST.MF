@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: com.swingy.ConsoleView
+Main-Class: com.swingy.view.ConsoleView
