@@ -1,6 +1,5 @@
 package com.swingy.controller;
 
-
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
@@ -20,7 +19,7 @@ public class VillainEncounterController {
     public VillainEncounterController(Champion champion, Villain villain, Map map) throws  IOException {
         System.out.println("You've had an encounter with a " + villain.villainName + ".");
         System.out.println("HitPoints: " + villain.hitPoints);
-        System.out.println("Make a choice: run / fight");
+        System.out.println("Make a choice: run / fight or quit.");
         String selection = userInput.nextLine();
 
         run = random.nextInt(2);

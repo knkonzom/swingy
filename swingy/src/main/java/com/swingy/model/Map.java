@@ -3,7 +3,6 @@ package com.swingy.model;
 import com.swingy.controller.VillainEncounterController;
 import com.swingy.model.characters.*;
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;

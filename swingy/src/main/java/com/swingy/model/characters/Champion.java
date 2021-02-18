@@ -1,7 +1,6 @@
 package com.swingy.model.characters;
 import javax.validation.constraints.*;
 
-
 public class Champion {
 
     @NotNull

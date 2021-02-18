@@ -1,8 +1,5 @@
 package com.swingy.model.characters;
 
-import com.swingy.model.artifacts.*;
-
-
 public class ChampionElf extends Champion {
 
     public ChampionElf() {

@@ -110,7 +110,10 @@ public class ConsoleView {
                 while (!line.contains("PositionX")) {
                     String stats = line.split(" ")[0];
                     String value = line.split(" ")[1];
-                    System.out.println(stats + ": " + value);
+                    System.out.print(stats);
+                    System.out.print(": ");
+                    System.out.print(value);
+                    System.out.print("  ");
                     line = bufReader.readLine();
                 }
                 System.out.println("\n");

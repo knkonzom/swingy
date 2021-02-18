@@ -3,7 +3,6 @@ package com.swingy.model.characters;
 import java.util.Random;
 import com.swingy.model.artifacts.*;
 
-
 public class VillainDemon extends Villain {
     Random random = new Random();
     int increaseDefense = random.nextInt(2) + 1;
